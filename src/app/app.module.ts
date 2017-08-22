@@ -6,6 +6,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ClientComponent } from './client/client.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
 import { PortfolioDetailComponent } from './portfolio/portfolio-detail/portfolio-detail.component';
+import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule,
+   MdIconModule, MdInputModule, MdPaginator} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,15 @@ import { PortfolioDetailComponent } from './portfolio/portfolio-detail/portfolio
     PortfolioDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdMenuModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdInputModule //,
+    //MdPaginator
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { PortfolioService } from './portfolio.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,7 +10,6 @@ import { PortfolioDetailComponent } from './portfolio/portfolio-detail/portfolio
 import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule,
    MdIconModule, MdInputModule, MdPaginator} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdInputModule //,
     //MdPaginator
   ],
-  providers: [],
+  providers: [PortfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

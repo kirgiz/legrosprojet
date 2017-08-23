@@ -12,6 +12,7 @@ import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule,
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TablePaginationExampleComponent } from './table-pagination-example/table-pagination-example.component';
 import { FormsModule } from '@angular/forms';
+//import { hammerjs } from 
 
 @NgModule({
   declarations: [

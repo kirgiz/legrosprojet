@@ -11,6 +11,7 @@ import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule,
    MdIconModule, MdInputModule, MdTableModule, MaterialModule, MdPaginator } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TablePaginationExampleComponent } from './table-pagination-example/table-pagination-example.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TablePaginationExampleComponent } from './table-pagination-example/tabl
     MdInputModule,
     CdkTableModule,
     MdTableModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]

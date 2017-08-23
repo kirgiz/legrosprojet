@@ -1,3 +1,42 @@
-<p>
-  portfolio-detail works!
-</p>
+<h3>Address Form</h3>
+<form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <table class="fullwidth" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="Portfolio Name" id="portfolioname" [(ngModel)]="portfolio.firstname" name="portfolioname">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="Portfolio Id" id="portfolioid" [(ngModel)]="portfolio.id" name="portfolioid">
+        </md-input-container>
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    <md-input-container class="fullwidth">
+      <textarea mdInput placeholder="Match Code" id="matchcode" [(ngModel)]="portfolio.matchCode" name="matchcode"></textarea>
+    </md-input-container>
+  </p>
+
+  <table class="fullwidth" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="Date Open" id="dateopen" [(ngModel)]="address.dateOpen" name="dateOpen">
+        </md-input-container>
+      </td>
+      <td>
+        <md-input-container class="fullwidth">
+          <input mdInput placeholder="Date Close" id="dateclose" [(ngModel)]="address.dateClose" name="dateClose">
+        </md-input-container>
+      </td>     
+    </tr>
+  </table>
+
+  <p>
+    <button type="submit" md-raised-button>Submit</button>
+  </p>
+</form>

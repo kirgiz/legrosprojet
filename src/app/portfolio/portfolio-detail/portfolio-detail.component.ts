@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Portfolio } from '../../portfolio';
+
 @Component({
   selector: 'app-portfolio-detail',
   templateUrl: './portfolio-detail.component.html',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioDetailComponent implements OnInit {
 
+  address = new Portfolio();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    alert('Thanks for submitting! Data: ' + JSON.stringify(this.address));
   }
 
 }

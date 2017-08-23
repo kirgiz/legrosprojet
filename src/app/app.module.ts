@@ -1,14 +1,16 @@
 import { PortfolioService } from './portfolio.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {CdkTableModule } from '@angular/cdk';
 import { AppComponent } from './app.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ClientComponent } from './client/client.component';
 import { ClientDetailComponent } from './client/client-detail/client-detail.component';
 import { PortfolioDetailComponent } from './portfolio/portfolio-detail/portfolio-detail.component';
 import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule,
-   MdIconModule, MdInputModule, MdPaginator } from '@angular/material';
+   MdIconModule, MdInputModule, MdTableModule, MaterialModule, MdPaginator } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TablePaginationExampleComponent } from './table-pagination-example/table-pagination-example.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PortfolioComponent,
     ClientComponent,
     ClientDetailComponent,
-    PortfolioDetailComponent
+    PortfolioDetailComponent,
+    TablePaginationExampleComponent//, MdPaginator
   ],
   imports: [
     BrowserModule,
@@ -26,8 +29,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdCardModule,
     MdToolbarModule,
     MdIconModule,
-    MdInputModule //,
-    //MdPaginator
+    MdInputModule,
+    CdkTableModule,
+    MdTableModule,
+    MaterialModule
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]

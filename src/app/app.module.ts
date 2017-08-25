@@ -1,3 +1,4 @@
+import { RoutingModule } from './routing/routing.module';
 import { PortfolioService } from './portfolio.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,7 @@ import { MdButtonModule, MdMenuModule, MdCardModule, MdToolbarModule,
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TablePaginationExampleComponent } from './table-pagination-example/table-pagination-example.component';
 import { FormsModule } from '@angular/forms';
-//import { hammerjs } from 
+
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     ClientComponent,
     ClientDetailComponent,
     PortfolioDetailComponent,
-    TablePaginationExampleComponent//, MdPaginator
+    TablePaginationExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     CdkTableModule,
     MdTableModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    RoutingModule
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]

@@ -1,10 +1,10 @@
-<h3>Address Form</h3>
+<h3>Portfolio Form</h3>
 <form class="formwidth" (ngSubmit)="onSubmit()" #myForm="ngForm">
   <table class="fullwidth" cellspacing="0">
     <tr>
       <td>
         <md-input-container class="fullwidth">
-          <input mdInput placeholder="Portfolio Name" id="portfolioname" [(ngModel)]="portfolio.firstname" name="portfolioname">
+          <input mdInput placeholder="Portfolio Name" id="portfolioname" [(ngModel)]="portfolio.name" name="portfolioname">
         </md-input-container>
       </td>
       <td>
@@ -25,12 +25,12 @@
     <tr>
       <td>
         <md-input-container class="fullwidth">
-          <input mdInput placeholder="Date Open" id="dateopen" [(ngModel)]="address.dateOpen" name="dateOpen">
+          <input mdInput placeholder="Date Open" id="dateopen" [(ngModel)]="portfolio.dateOpen" name="dateOpen">
         </md-input-container>
       </td>
       <td>
         <md-input-container class="fullwidth">
-          <input mdInput placeholder="Date Close" id="dateclose" [(ngModel)]="address.dateClose" name="dateClose">
+          <input mdInput placeholder="Date Close" id="dateclose" [(ngModel)]="portfolio.dateClose" name="dateClose">
         </md-input-container>
       </td>     
     </tr>

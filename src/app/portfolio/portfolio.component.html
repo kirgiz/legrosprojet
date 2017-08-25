@@ -13,9 +13,9 @@
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- ID Column -->
-    <ng-container cdkColumnDef="PortfolioId">
+    <ng-container cdkColumnDef="PortfolioId" >
       <md-header-cell *cdkHeaderCellDef md-sort-header> PortfolioID </md-header-cell>
-      <md-cell *cdkCellDef="let row"> {{row.id}} </md-cell>
+      <md-cell *cdkCellDef="let row" (click)="onSelect(portfolio)"> {{row.id}} </md-cell>
     </ng-container>
 
     <!-- Name Column -->

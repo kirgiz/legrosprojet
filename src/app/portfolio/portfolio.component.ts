@@ -11,6 +11,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
 import { Portfolio } from './../portfolio';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -19,11 +20,17 @@ import { Portfolio } from './../portfolio';
 })
 export class PortfolioComponent implements OnInit {
   displayedColumns = ['PortfolioId', 'PortfolioName'];
-  portfolioDatabase: PortfolioDatabase = new PortfolioDatabase(new PortfolioService());
+  portfolioDatabase: PortfolioDatabase = new PortfolioDatabase(this.portfolioService);
   dataSource: PortfolioDataSource | null;
+  selectedPortfolio: Portfolio;
   @ViewChild(MdPaginator) paginator: MdPaginator;
   @ViewChild(MdSort) sort: MdSort;
   @ViewChild('filter') filter: ElementRef;
+
+  constructor(
+    private portfolioService: PortfolioService,
+    private router: Router) { }
+
   ngOnInit() {
     this.dataSource = new PortfolioDataSource(this.portfolioDatabase, this.paginator, this.sort);
     Observable.fromEvent(this.filter.nativeElement, 'keyup')
@@ -33,6 +40,14 @@ export class PortfolioComponent implements OnInit {
       if (!this.dataSource) { return; }
       this.dataSource.filter = this.filter.nativeElement.value;
     });
+  }
+  onSelect(portfolio: Portfolio): void {
+    this.selectedPortfolio = portfolio;
+   this.gotoDetail();
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/portfolioDetail']);
   }
 }
 
@@ -108,3 +123,4 @@ export class PortfolioDatabase {
     }
   }
 }
+

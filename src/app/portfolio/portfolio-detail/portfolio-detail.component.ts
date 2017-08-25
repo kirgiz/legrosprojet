@@ -1,6 +1,5 @@
+import { Portfolio } from './../../portfolio';
 import { Component, OnInit } from '@angular/core';
-
-import { Portfolio } from '../../portfolio';
 
 @Component({
   selector: 'app-portfolio-detail',
@@ -9,7 +8,7 @@ import { Portfolio } from '../../portfolio';
 })
 export class PortfolioDetailComponent implements OnInit {
 
-  address = new Portfolio();
+  portfolio = new Portfolio();
 
   constructor() { }
 
@@ -17,7 +16,7 @@ export class PortfolioDetailComponent implements OnInit {
   }
 
   onSubmit() {
-    alert('Thanks for submitting! Data: ' + JSON.stringify(this.address));
+    alert('Thanks for submitting! Data: ' + JSON.stringify(this.portfolio));
   }
 
 }
